@@ -8,8 +8,15 @@ import {
   Revenue,
 } from './definitions';
 import { formatCurrency } from './utils';
+import { auth } from "@/auth"
+
 
 export async function fetchRevenue() {
+  
+  
+  const session = await auth()
+  console.log('mi sesión es: ', session)
+
   try {
     // Artificially delay a response for demo purposes.
     // Don't do this in production :)

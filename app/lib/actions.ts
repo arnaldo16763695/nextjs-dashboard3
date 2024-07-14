@@ -138,6 +138,7 @@ export async function authenticate(
         default:
           return 'Something went wrong.';
       }
+      
     }
     throw error;
   }
